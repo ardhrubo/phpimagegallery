@@ -7,8 +7,11 @@
 </head>
 <body>
    <pre>
-    <?php print_r($_FILES);
-       move_uploaded_file($_FILES['pdf']['tmp_name'],'./fileupload/uploads/abc.pdf')
+    <?php 
+        print_r($_FILES);
+       move_uploaded_file($_FILES['pdf']['tmp_name'],'./fileupload/uploads/'.$_FILES['pdf']['name']);
+
+    
     ?>
  
 
