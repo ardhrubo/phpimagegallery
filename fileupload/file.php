@@ -6,10 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-   <pre>
+   
+
+
+<form action="" method="post" enctype="multipart/form-data">  
+        <input type="file" name="photo">
+        <input type="submit" name="submit" value="submit">
+    </form> 
+    
+
+
+<pre>
     <?php 
-        print_r($_FILES);
-      
+
+print_r($_FILES);
+        
+print_r($_SERVER);
 
     
     if($_FILES['photo']){
@@ -23,21 +35,21 @@
             echo "This is not a right file type, only jpg,jpeg,png allowed";
         }
 
+      
     }
  
 
     ?>
  
 
+ 
+
+
 
    </pre>
 
 
-    <form action="" method="post" enctype="multipart/form-data">  
-        <input type = "file" name="photo">
-        <input type="submit" name="submit" value="submit">
-    </form> 
-    
+
     
 </body>
 </html>
