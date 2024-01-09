@@ -1,5 +1,5 @@
 <?php
-function uploadFiles($filesArray) {
+function uploadFiles($filesArray, $destinationDirectory) {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if(isset($filesArray['photo'])){
             foreach($filesArray['photo']['tmp_name'] as $key => $tmp_name ){
@@ -12,7 +12,7 @@ function uploadFiles($filesArray) {
                     echo 'File size should be less than 1 MB';
                     exit;
                 }
-                move_uploaded_file($tmp_name, './imagegallery/images/'.$filesArray['photo']['name'][$key]);
+                move_uploaded_file($tmp_name, $destinationDirectory.'/'.$filesArray['photo']['name'][$key]);
             }
         } else {
             echo 'Please fill up the form';

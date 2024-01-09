@@ -9,9 +9,14 @@ $dir = opendir(directory:'./imagegallery/images');
 
 $images =  directoryReader('./imagegallery/images');
 
+
+// Call the uploadFiles function with the $_FILES array and the destination directory
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    uploadFiles($_FILES);
+    $destination = './imagegallery/images'; 
+    uploadFiles($_FILES, $destination);
 }
+
+
 
 if(!$images){
 
