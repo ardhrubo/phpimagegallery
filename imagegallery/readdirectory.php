@@ -1,7 +1,5 @@
 <?php
 
-echo 'hello';
-
 
 function directoryReader($directory,array $exclude = array('.','..')){
     $files = [];
@@ -11,9 +9,34 @@ function directoryReader($directory,array $exclude = array('.','..')){
 
     if(!is_dir($directory)){
         return null;
-    } else{
-        echo 'ok';
+    } 
+
+    if(($openDir = opendir($directory))){
+        while(($file = readdir($openDir)) !== false){
+            
+            if(in_array($file,$exclude)){
+                continue;
+            }
+
+            $files[] = $directory. '/' . $file;
+            
+
+        }
+        
+       
     }
+
+    closedir($openDir);
+    
+    // if(!($fileDirectory = opendir($directory))){
+    //     return null;
+      
+    // }
+    // while(($file = readdir($directory)) !== false ){
+    //     var_dump($file) ;
+    // }
+
+    
 
 
 
@@ -22,7 +45,7 @@ function directoryReader($directory,array $exclude = array('.','..')){
     // add to image  array
     // return images array
 
-
+   return $files;
 
 }
 

@@ -1,3 +1,29 @@
+
+
+<?php
+
+include('./imagegallery/readdirectory.php');
+
+$dir = opendir(directory:'./imagegallery/images');
+
+$images =  directoryReader('./imagegallery/images');
+
+
+
+if(!$images){
+
+    die('No folder found');
+
+} 
+
+
+// while($imageFile = readdir($dir)){
+//     var_dump($imageFile);
+// }
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,36 +44,16 @@
     </form>
 
     <br>
+<?php foreach($images as $image): ?>
+
+    <img src="<?php echo $image ?>">
+
+<?php endforeach; ?>
+
     
 </body>
 
 </html>
 
 
-
-
-
-<?php
-
-include('./imagegallery/readdirectory.php');
-
-$dir = opendir(directory:'./imagegallery/images');
-
-$images =  directoryReader(directory:'./imagegallery/images');
-
-
-
-if(!$images){
-
-    die('No folder found');
-
-} 
-
-
-// while($imageFile = readdir($dir)){
-//     var_dump($imageFile);
-// }
-
-
-?>
 
