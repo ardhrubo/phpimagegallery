@@ -1,5 +1,5 @@
 <?php
 
-include('./fileupload/file.php');
+include('./imagegallery/file.php');
 
 
