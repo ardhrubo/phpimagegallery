@@ -1,4 +1,6 @@
 <?php
 
-echo 'hello';
+echo date('d-m-y');
+
+
 
