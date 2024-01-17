@@ -9,10 +9,10 @@ $startDate = strtotime("2024-01-01");
 $endDate = strtotime("2024-01-20");
 
 
-// while($startDate< $endDate){
-//     echo date("d-m-Y", $startDate). "\n";
-//     $startDate = strtotime("+1 day", $startDate);
-// }
+while($startDate< $endDate){
+    echo date("d-m-Y", $startDate). "\n";
+    $startDate = strtotime("+1 day", $startDate);
+}
 
 $diff = $endDate - $startDate;
 
