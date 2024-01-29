@@ -1,0 +1,12 @@
+{
+    "name": "ardhr/composer",
+    "authors": [
+        {
+            "name": "ardhrubo",
+            "email": "ardhrubo3038@gmail.com"
+        }
+    ],
+    "require": {
+        "nesbot/carbon": "^2.72"
+    }
+}
