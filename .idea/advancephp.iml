@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/composer/vendor/carbonphp/carbon-doctrine-types" />
+      <excludeFolder url="file://$MODULE_DIR$/composer/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/composer/vendor/nesbot/carbon" />
+      <excludeFolder url="file://$MODULE_DIR$/composer/vendor/psr/clock" />
+      <excludeFolder url="file://$MODULE_DIR$/composer/vendor/symfony/deprecation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/composer/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/composer/vendor/symfony/polyfill-php80" />
+      <excludeFolder url="file://$MODULE_DIR$/composer/vendor/symfony/translation" />
+      <excludeFolder url="file://$MODULE_DIR$/composer/vendor/symfony/translation-contracts" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
